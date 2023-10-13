@@ -28,23 +28,31 @@ rel="stylesheet"
   <header>
     <h1>Weather Dashboard</h1>
   </header>
-  <main class="">
-    <section id="search" class="col">
+  <main class="row">
+    <section id="search" class="col-12 col-md-3">
       <h2>Search for a City</h2>
-      <form>
+      <form class="location">
         <div class="mb-3">
           <label for="city" class="form-label">Search</label>
-          <input type="text" class="form-control" id="city">
+          <input type="text" class="form-control" id="city" placeholder="City">
+          <input type="text" class="form-control" id="state" placeholder="State">
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>
       <div >
-        <ul id="saved-cities"></ul>
+        <ul id="saved-cities">
+          <div class="row">
+            <h3 class="col-10">city name</h3>
+            <button class="col-2">delete button</button>
+
+          </div>
+        </ul>
       </div>
     </section>
-    <section class="conditions col" >
+    <section class="conditions col-12 col-md-9" >
       <div id="current-conditions" class="col">
-        <h2></h2>   <!-- will contain selected city name and date -->
+        <h2>Current Weather</h2> 
+        <h3 id="h3Location"></h3>  <!-- will contain selected city name and date -->
         <ul></ul>   
       </div>
       <div id="future-conditions" class="col">

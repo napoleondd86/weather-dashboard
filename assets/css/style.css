@@ -1,0 +1,16 @@
+section {
+  border: 2px solid orange;
+}
+
+main {
+  border: 2px solid red;
+}
+
+form,
+#current-conditions,
+#future-conditions {
+  border: 2px solid yellow;
+}
+
+
+
