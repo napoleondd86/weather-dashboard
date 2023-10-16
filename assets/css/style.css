@@ -8,9 +8,27 @@ main {
 
 form,
 #current-conditions,
-#future-conditions {
+#future-conditions,
+#forecast-conditions {
   border: 2px solid yellow;
 }
 
+.city-name {
+  border: 2px solid black;
+}
 
+#saved-cities {
+  list-style-type: none;
+  border: 2px solid yellow;
+  padding: 1rem;
+}
 
+#forecast-conditions,
+.city-attributes {
+  list-style-type: none;
+  padding: 1rem;
+}
+
+li {
+  list-style-type: none;
+}
