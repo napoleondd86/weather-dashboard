@@ -25,7 +25,7 @@ function displayForecastWx(data){
   $('#forecast-conditions').html("");
   var dayIndex = 1
   var hourIndex = 6
-  console.log(icon)
+  console.log(data.city.name)
   console.log(wind)
   console.log(feelsLike)
   console.log(temp)
@@ -43,9 +43,9 @@ function displayForecastWx(data){
         <ul class='city-attributes'>
           <h3>${date.add(`${dayIndex}`, 'day').format("MMMM D")}</h3>
           <li><img src='${iconURL}' /></li>
-          <li>Temperature: ${temp}deg F</li>
+          <li>Temp: ${temp}F</li>
           <li>Winds: ${wind.speed}mph Gusting: ${wind.gust}mph</li>
-          <li>Feels like: ${feelsLike}deg F</li>
+          <li>Feels like: ${feelsLike}F</li>
         </ul>
       </li>
     `)
@@ -203,7 +203,7 @@ function displayCurrentWx(data){
   var iconURL = `https://openweathermap.org/img/wn/${icon}@2x.png`;
   console.log(iconURL)
   $('#current-conditions').append($(`
-  <li>${data.name} ${todayDate} <img src=${iconURL} /></li>
+  <li><h3>${data.name} ${todayDate}</h3> <img src=${iconURL} />Temp: ${data.main.temp}F, Wind: ${data.wind.speed}mph, Humidity: ${data.main.humidity}%</li>
   `))
 }
 
